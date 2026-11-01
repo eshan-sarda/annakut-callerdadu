@@ -304,7 +304,7 @@ def load_guests():
     conn = st.connection("gsheets", type=GSheetsConnection)
     
     # Read the live data from the cloud
-    df = conn.read(spreadsheet="https://docs.google.com/spreadsheets/d/1X1vmRt3QfG_m6dANAmY7YdAlrZLKFoCU_LveOm_G1Lc/edit?gid=2030823989#gid=2030823989")
+    df = conn.read(spreadsheet="https://docs.google.com/spreadsheets/d/1sM5mTYd6xETqXGPgR1xiAZ2yLg8oTSSSuAOqN2LAQwc/edit?gid=0#gid=0")
     
     df.columns = df.columns.str.strip()
     if "Status" not in df.columns:
@@ -386,7 +386,7 @@ def call_dialog(idx, mode="outbound"):
             # 2. Instantly push the update to Google Sheets
             conn = st.connection("gsheets", type=GSheetsConnection)
             conn.update(
-                spreadsheet="https://docs.google.com/spreadsheets/d/1X1vmRt3QfG_m6dANAmY7YdAlrZLKFoCU_LveOm_G1Lc/edit?gid=2030823989#gid=2030823989", 
+                spreadsheet="https://docs.google.com/spreadsheets/d/1sM5mTYd6xETqXGPgR1xiAZ2yLg8oTSSSuAOqN2LAQwc/edit?gid=0#gid=0", 
                 data=ss.df
             )
             
