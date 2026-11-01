@@ -1,0 +1,4 @@
+streamlit>=1.50
+pandas
+streamlit-keyup
+st-gsheets-connection
